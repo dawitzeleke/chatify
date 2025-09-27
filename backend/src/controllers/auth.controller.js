@@ -25,8 +25,9 @@ export const signup = async  (req, res) => {
         // Create new user
         const newUser = new User({ fullname, email, password: passwordToStore });
         if(newUser){
-            generateToken(newUser._id, res);
-            await newUser.save();
+            const savedUser = await newUser.save();
+            generateToken(savedUser._id, res);
+            
             return res.status(201).json({
                 _id: newUser._id,
                 email: newUser.email,
