@@ -64,7 +64,7 @@ function LoginPage() {
 
                   {/* SUBMIT BUTTON */}
                   <button className="auth-btn" type="submit" disabled={isLoggingIn}>
-                    {isLogginIn ? (
+                    {isLoggingIn ? (
                       <LoaderIcon className="w-full h-5 animate-spin text-center" />
                     ) : (
                       "Sign In"
