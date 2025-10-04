@@ -1,6 +1,7 @@
 import Message from '../models/Message.js';
 import User from '../models/User.js';
-
+import cloudinary from 'cloudinary';
+// ...existing code...
 
 export const getAllContacts = async (req, res) => {
     try {
